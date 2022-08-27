@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap');
 
+
+//  font-family: "Archivo Black", sans-serif;
+
+
 *,
 *::after,
 *::before {
@@ -20,6 +24,13 @@ body {
 // typhography
 
 h1 {
+
+    // background: #1777DE;
+    // background: linear-gradient(to right, #1777DE 28%, #49BC78 64%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+
+
     color:$accent2;
     font-size: $size1;
     font-weight: 600;
@@ -99,16 +110,21 @@ a {
     @media screen and (min-width: 900px){
         .row {
             display: flex;
+            gap: 2rem
         }
     }
 
     &__input {
-        max-width: 400px;
+        // max-width: 400px;
         border: .5rem outset $accent2;
         background-color: $bkg;
         padding: 2rem;
         display: grid;
         gap: 1rem;
+
+        @media screen and (min-width: 900px){
+            max-width: 400px;
+        }
 
         .option-group {
             

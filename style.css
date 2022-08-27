@@ -96,17 +96,23 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 2rem;
   }
 }
 
 .generator__input {
-  max-width: 400px;
   border: 0.5rem outset #1777de;
   background-color: floralwhite;
   padding: 2rem;
   display: -ms-grid;
   display: grid;
   gap: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  .generator__input {
+    max-width: 400px;
+  }
 }
 
 .generator__input .option-wrapper {
