@@ -19,9 +19,6 @@ function hexToRGB(hex) {
     return `${r}, ${g}, ${b}`
 }
 
-console.log(hexToRGB('#121111'));
-
-
 function updateShadow() {
     const hOffset = document.querySelector('#horizontal').value;
     const vOffset = document.querySelector('#vertical').value;
@@ -30,10 +27,18 @@ function updateShadow() {
     const opacity = document.querySelector('#opacity').value;
     const color = document.querySelector('#shadow-color').value;
     const inset = document.querySelector('#inset').checked;
+    const codeContainer  = document.querySelector('#generatedCode');
     
-    console.log(`${hOffset}px ${vOffset}px ${blur}px ${spread}px rgb${hexToRGB(color)}`)
+    const shadowCode = `${inset ? 'inset' : ''} ${hOffset}px ${vOffset}px ${blur}px ${spread}px rgb(${hexToRGB(color)}, ${opacity})`
     
-    box.style['boxShadow'] = `${inset ? 'inset' : ''} ${hOffset}px ${vOffset}px ${blur}px ${spread}px rgb(${hexToRGB(color)}, ${opacity})`
+    box.style['boxShadow'] = shadowCode;
+
+    const strCode = `
+                    -webkit-box-shadow: ${shadowCode};<br>
+                    -moz-box-shadow: ${shadowCode};<br>
+                    box-shadow: ${shadowCode};
+                    `
+    codeContainer.innerHTML = strCode;
 }
 
 
@@ -41,8 +46,6 @@ const horizontalInputs = document.querySelectorAll('input[name=horizontal]');
 
 horizontalInputs.forEach((input, i) => {
     input.addEventListener('input', () => {
-        // console.log(input.getAttribute('type'))
-        // console.log(horizontalInputs[i])
         horizontalInputs[1-i].value = horizontalInputs[i].value;
         
         updateShadow();
@@ -65,9 +68,8 @@ const blurInputs = document.querySelectorAll('input[name=blur]');
 blurInputs.forEach((input, i) => {
     input.addEventListener('input', () => {
         blurInputs[1-i].value = blurInputs[i].value;
-
-        const blur = input.value        
-        updateShadow(blur);
+      
+        updateShadow();
     })
 })
 
@@ -81,7 +83,6 @@ spreadInputs.forEach((input, i) => {
 })
 
 const opacityInputs = document.querySelectorAll('input[name=opacity]');
-console.log(opacityInputs)
 
 opacityInputs.forEach((input, i) => {
     input.addEventListener('input', () => {

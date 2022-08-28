@@ -25,13 +25,13 @@ body {
 
 h1 {
 
-    // background: #1777DE;
-    // background: linear-gradient(to right, #1777DE 28%, #49BC78 64%);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
+    background: #1777DE;
+    background: linear-gradient(to right, #1777DE 35%, #49BC78 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 
-    color:$accent2;
+    // color:$accent2;
     font-size: $size1;
     font-weight: 600;
     line-height: 1;
@@ -49,7 +49,6 @@ a {
     font-weight: 600;
     color: $accent1;
     line-height: 1;
-
 }
 
 // utility
@@ -76,8 +75,8 @@ a {
 }
 
 .nav {
-    margin-top: 2rem;
-    margin-bottom: 2rem; 
+    margin-top: $gap-main;
+    margin-bottom: $gap-main; 
 
     &__list {
         list-style: none;
@@ -102,20 +101,27 @@ a {
 
 .generator {
 
-    // display: grid;
-    // place-content: center;
+    display: grid;
+    gap: $gap-main;
    
     color: $text;
 
-    @media screen and (min-width: 800px){
-        .row {
+    .row {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-main;
+
+        @media screen and (min-width: 800px){
+        
             display: flex;
-            gap: 2rem
+            flex-direction: row;
+            gap: $gap-main; 
         }
     }
 
+   
+
     &__input {
-        // max-width: 400px;
         border: .5rem outset $accent2;
         background-color: $bkg;
         padding: 2rem;
@@ -180,10 +186,17 @@ a {
 
     &__output {
         margin: 0 auto;
-        max-width: 600px;
         background-color: $bkg;
         border: .5rem outset $accent2;
         padding: 1rem;
+        width: 100%;
+
+        @media screen and(min-width: 800px) {
+            // 100% - (div input + gap)
+            width: calc(100% - calc(25rem + 2rem)); 
+            margin: 0;
+            margin-left: auto;
+        }
 
         .code {
             padding: 1rem;
@@ -192,8 +205,9 @@ a {
         }
 
         .btn-container {
+            margin-top: 1rem;
             display: flex;
-            justify-content: center;    
+            justify-content: center;
         }
 
         .btn-copy {
@@ -208,7 +222,7 @@ a {
             transition: all 250ms ease-in-out;
 
             &:hover, &:focus {
-                border: 9px solid $accent2;
+                border: 9px outset $accent2;
                 background-color: $bkg;
                 color: $accent2;
             }

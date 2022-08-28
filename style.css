@@ -16,7 +16,11 @@ body {
 }
 
 h1 {
-  color: #1777de;
+  background: #1777DE;
+  background: -webkit-gradient(linear, left top, right top, color-stop(35%, #1777DE), color-stop(65%, #49BC78));
+  background: linear-gradient(to right, #1777DE 35%, #49BC78 65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: clamp(2.4rem, calc(1.06363634rem + 6.109091vw), 4.5rem);
   font-weight: 600;
   line-height: 1;
@@ -88,7 +92,21 @@ a {
 }
 
 .generator {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
   color: #001f0d;
+}
+
+.generator .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -96,6 +114,10 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 2rem;
   }
 }
@@ -174,10 +196,18 @@ a {
 
 .generator__output {
   margin: 0 auto;
-  max-width: 600px;
   background-color: floralwhite;
   border: 0.5rem outset #1777de;
   padding: 1rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .generator__output {
+    width: calc(100% - calc(25rem + 2rem));
+    margin: 0;
+    margin-left: auto;
+  }
 }
 
 .generator__output .code {
@@ -187,6 +217,7 @@ a {
 }
 
 .generator__output .btn-container {
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,7 +240,7 @@ a {
 }
 
 .generator__output .btn-copy:hover, .generator__output .btn-copy:focus {
-  border: 9px solid #1777de;
+  border: 9px outset #1777de;
   background-color: floralwhite;
   color: #1777de;
 }

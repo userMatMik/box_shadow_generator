@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>👀CSS Helper👀</title>
+    <title>Document</title>
 </head>
 <body>
     <header class="header">
@@ -14,7 +13,7 @@
     </header>
     <nav class="nav">
         <ul class="nav__list wrapper">
-            <li class="nav__item"><a href="" class="nav__link">Box Shadow</a></li>
+            <li class="nav__item"><a href="./index.html" class="nav__link">Box Shadow</a></li>
             <li class="nav__item"><a href="./text-shadow.html" class="nav__link">Text Shadow</a></li>
             <li class="nav__item"><a href="" class="nav__link">Border Radius</a></li>
         </ul>
@@ -22,7 +21,14 @@
     <main class="generator wrapper">
         <div class="row">
             <div class="generator__input">
-                <h2>Box - shadow options</h2>
+                <h2>Text - shadow options</h2>
+                <div class="option-group">
+                    <div class="option-wrapper">
+                        <label for="horizontal">Horizontal</label>
+                        <input type="number" name="horizontal" id="horizontal" step="1" min="-100" max="100" value="12">
+                    </div>
+                    <input type="range" name="horizontal" id="horizontal-range" step="1" min="-100" max="100" value="12">
+                </div>
                 <div class="option-group">
                     <div class="option-wrapper">
                         <label for="horizontal">Horizontal</label>
@@ -76,7 +82,7 @@
             </div>
         </div>
         <div class="generator__output">
-            <p class="code" id="generatedCode">
+            <p class="code">
                 -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);<br>
                 -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);<br>
                 box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
@@ -85,9 +91,5 @@
                 <button class="btn-copy">Copy to clipboard</button>
             </div>
         </div>
-
-    </main>
-
-    
 </body>
 </html>
