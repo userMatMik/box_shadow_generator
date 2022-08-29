@@ -16,14 +16,18 @@ body {
 }
 
 h1 {
-  background: #1777DE;
-  background: -webkit-gradient(linear, left top, right top, color-stop(35%, #1777DE), color-stop(65%, #49BC78));
-  background: linear-gradient(to right, #1777DE 35%, #49BC78 65%);
+  background-color: #1777DE;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(35%, #1777DE), color-stop(65%, #49BC78));
+  background-image: linear-gradient(to right, #1777DE 35%, #49BC78 65%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: clamp(2.4rem, calc(1.06363634rem + 6.109091vw), 4.5rem);
   font-weight: 600;
   line-height: 1;
+}
+
+h1:hover {
+  color: #1777de;
 }
 
 h2 {
@@ -147,6 +151,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 5px;
 }
 
 .generator__input label {
@@ -155,18 +160,27 @@ a {
   margin-right: auto;
 }
 
-.generator__input input[type='number'] {
+.generator__input input[type=number] {
   font-family: inherit;
+  font-size: 1rem;
   margin-left: auto;
-  padding: .3rem;
+  padding: 0.3rem;
   background-color: #1777de;
   color: floralwhite;
   text-align: center;
 }
 
-.generator__input input[type='range'] {
+.generator__input input[type=range] {
   display: block;
   width: 100%;
+}
+
+.generator__input input[type=text] {
+  font-family: inherit;
+  background-color: #1777de;
+  font-size: 1rem;
+  padding: 0.3rem;
+  color: floralwhite;
 }
 
 .generator__preview {
@@ -192,6 +206,12 @@ a {
     width: 300px;
     height: 300px;
   }
+}
+
+.generator__preview .text-preview {
+  font-size: clamp(2.4rem, calc(1.06363634rem + 6.109091vw), 4.5rem);
+  font-weight: 600;
+  color: #49bc78;
 }
 
 .generator__output {

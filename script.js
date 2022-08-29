@@ -1,3 +1,5 @@
+import { hexToRGB } from "./modules/hextorgb.js";
+
 const box = document.querySelector('#box');
 
 
@@ -10,14 +12,15 @@ const box = document.querySelector('#box');
 //? Get the 2 right digits of the hex color code and convert to decimal value to get the blue color level
 
 
-function hexToRGB(hex) {
-    const hexValue = hex.replace('#', '');
-    const r = parseInt(hexValue.slice(0, 2), 16);
-    const g = parseInt(hexValue.slice(2, 4), 16);
-    const b = parseInt(hexValue.slice(4, 6), 16);
+// function hexToRGB(hex) {
+//     const hexValue = hex.replace('#', '');
+//     const r = parseInt(hexValue.slice(0, 2), 16);
+//     const g = parseInt(hexValue.slice(2, 4), 16);
+//     const b = parseInt(hexValue.slice(4, 6), 16);
     
-    return `${r}, ${g}, ${b}`
-}
+//     return `${r}, ${g}, ${b}`
+// }
+
 
 function updateShadow() {
     const hOffset = document.querySelector('#horizontal').value;
@@ -95,4 +98,5 @@ opacityInputs.forEach((input, i) => {
 document.querySelector('#shadow-color').addEventListener('change', updateShadow);
 
 document.querySelector('#inset').addEventListener('change',updateShadow);
+
 

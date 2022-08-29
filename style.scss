@@ -25,8 +25,8 @@ body {
 
 h1 {
 
-    background: #1777DE;
-    background: linear-gradient(to right, #1777DE 35%, #49BC78 65%);
+    background-color: #1777DE;
+    background-image: linear-gradient(to right, #1777DE 35%, #49BC78 65%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -35,7 +35,40 @@ h1 {
     font-size: $size1;
     font-weight: 600;
     line-height: 1;
+
+    // animation: text-simtext-simple-animation-rev 0.5s ease-in forwards;
+
+    &:hover {
+        color:$accent2;
+
+        // animation: text-simtext-simple-animation 0.5s ease-in forwards;
+    }
 }
+// @keyframes text-simple-animation-rev {
+//     0% {
+//         background-size: 650%;
+//     }
+//     40% {
+//         background-size: 650%;
+//     }
+//     100% {
+//         background-size: 100%;
+//     }
+// }
+
+// @keyframes text-simple-animation {
+//     0% {
+//         background-size: 100%;
+//     }
+//     80% {
+//         background-size: 650%;
+//     }
+//     100% {
+//         background-size: 650%;
+//     }
+// }
+
+
 
 h2 {
     color:$accent2;
@@ -140,6 +173,7 @@ a {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 5px;
         }
 
         label {
@@ -148,19 +182,29 @@ a {
             margin-right: auto;
         }
 
-        input[type='number'] {
+        input[type=number] {
             font-family: inherit;
+            font-size: 1rem;
             margin-left: auto;
-            padding: .3rem;
+            padding: 0.3rem;
             background-color: $accent2;
             color: $bkg;
             text-align: center;
         }
 
-        input[type='range'] {
+        input[type=range] {
             display: block;
             width: 100%;
-        } 
+        }
+        
+        input[type=text] {
+            font-family: inherit;
+            background-color: $accent2;
+            font-size: 1rem;
+            padding: 0.3rem;
+            color: $bkg;
+
+        }
     }
 
     &__preview {
@@ -181,6 +225,12 @@ a {
                 height: 300px;
             }
             
+        }
+
+        .text-preview {
+            font-size: $size1;
+            font-weight: 600;
+            color: $accent1;
         }
     }
 
