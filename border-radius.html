@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js" defer></script>
-    <title>👀CSS Helper👀</title>
+    <script type="module" src="./modules/border-radius.js" defer></script>
+    <title>CSS Helper | Border Radius</title>
 </head>
 <body>
     <header class="header">
@@ -14,7 +14,7 @@
     </header>
     <nav class="nav">
         <ul class="nav__list wrapper">
-            <li class="nav__item"><a href="" class="nav__link">Box Shadow</a></li>
+            <li class="nav__item"><a href="./index.html" class="nav__link">Box Shadow</a></li>
             <li class="nav__item"><a href="./text-shadow.html" class="nav__link">Text Shadow</a></li>
             <li class="nav__item"><a href="./border-radius.html" class="nav__link">Border Radius</a></li>
         </ul>
@@ -22,54 +22,50 @@
     <main class="generator wrapper">
         <div class="row">
             <div class="generator__input">
-                <h2>Box - shadow options</h2>
+                <h2>Border radius options</h2>
                 <div class="option-group">
                     <div class="option-wrapper">
-                        <label for="horizontal">Horizontal</label>
-                        <input type="number" name="horizontal" id="horizontal" step="1" min="-100" max="100" value="12">
+                        <label for="top-left">Top left</label>
+                        <input type="number" name="top-left" id="top-left-input" step="1" min="-100" max="100" value="12">
                     </div>
-                    <input type="range" name="horizontal" id="horizontal-range" step="1" min="-100" max="100" value="12">
+                    <input type="range" name="top-left" id="top-left-range" step="1" min="-100" max="100" value="12">
                 </div>
                 <div class="option-group">
                     <div class="option-wrapper">
-                        <label for="vertical">Vertical</label>
-                        <input type="number" name="vertical" id="vertical" step="1" min="-100" max="100" value="12">
+                        <label for="top-right">Top right</label>
+                        <input type="number" name="top-right" id="top-right-input" step="1" min="-100" max="100" value="12">
                     </div>
-                    <input type="range" name="vertical" id="vertical-range" step="1" min="-100" max="100" value="12">
+                    <input type="range" name="top-right" id="top-right-range" step="1" min="-100" max="100" value="12">
                 </div>
                 <div class="option-group">
                     <div class="option-wrapper">
-                        <label for="blur">Blur</label>
-                        <input type="number" name="blur" id="blur" step="1" min="0" max="100" value="22">
+                        <label for="bottom-right">Bottom right</label>
+                        <input type="number" name="bottom-right" id="bottom-right-input" step="1" min="-100" max="100" value="12">
                     </div>
-                    <input type="range" name="blur" id="blur-range" step="1" min="0" max="100" value="22">
+                    <input type="range" name="bottom-right" id="bottom-right-range" step="1" min="-100" max="100" value="12">
                 </div>
                 <div class="option-group">
                     <div class="option-wrapper">
-                        <label for="spread">Spread</label>
-                        <input type="number" name="spread" id="spread" step="1" min="-100" max="100" value="0">
+                        <label for="bottom-left">Bottom left</label>
+                        <input type="number" name="bottom-left" id="bottom-left-input" step="1" min="-100" max="100" value="12">
                     </div>
-                    <input type="range" name="spread" id="spread-range" step="1" min="-100" max="100" value="0">
+                    <input type="range" name="bottom-left" id="bottom-left-range" step="1" min="-100" max="100" value="12">
                 </div>
                 <div class="option-group">
                     <div class="option-wrapper">
-                        <label for="opacity">Opacity</label>
-                        <input type="number" name="opacity" id="opacity" step="0.05" min="0" max="1" value="0.8">
+                        <label for="box-width">Box width</label>
+                        <input type="number" name="box-width" id="box-width-input" step="1" min="10" max="400" value="100">
                     </div>
-                    <input type="range" name="opacity" id="opacity-range" step="0.05" min="0" max="1" value="0.8">
+                    <input type="range" name="box-width" id="box-width-range" step="1" min="10" max="400" value="100">
                 </div>
                 <div class="option-group">
                     <div class="option-wrapper">
-                        <label for="shadow-color">Shadow color</label>
-                        <input type="color" id="shadow-color" value="rgb(66, 68, 90)" >
+                        <label for="box-height">Box height</label>
+                        <input type="number" name="box-height" id="box-height-input" step="1" min="10" max="400" value="100">
                     </div>
+                    <input type="range" name="box-height" id="box-height-range" step="1" min="10" max="400" value="100">
                 </div>
-                <div class="option-group">
-                    <div class="option-wrapper">
-                        <label for="inset">Inset</label>
-                        <input type="checkbox" id="inset" name="inset">
-                    </div>
-                </div>
+                
             </div>
             <div class="generator__preview">
                 <div id="box" class="box" style="box-shadow: rgba(66, 68, 90, 0.8) 12px 12px 22px 0px;"></div>
@@ -87,7 +83,5 @@
         </div>
 
     </main>
-
-    
 </body>
 </html>

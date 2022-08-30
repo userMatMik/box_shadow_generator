@@ -35,6 +35,7 @@ h1 {
     font-size: $size1;
     font-weight: 600;
     line-height: 1;
+    letter-spacing: -2px;
 
     // animation: text-simtext-simple-animation-rev 0.5s ease-in forwards;
 
@@ -75,6 +76,7 @@ h2 {
     font-size: $size3;
     font-weight: 600;
     line-height: 1;
+    letter-spacing: -1px;
 }
 
 a {
@@ -82,6 +84,7 @@ a {
     font-weight: 600;
     color: $accent1;
     line-height: 1;
+    letter-spacing: -1px;
 }
 
 // utility
@@ -190,6 +193,7 @@ a {
             background-color: $accent2;
             color: $bkg;
             text-align: center;
+            max-width: 80px;
         }
 
         input[type=range] {
