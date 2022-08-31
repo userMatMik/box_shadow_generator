@@ -160,7 +160,7 @@ a {
     &__input {
         border: .5rem outset $accent2;
         background-color: $bkg;
-        padding: 2rem;
+        padding:  2rem 1.4rem;
         display: grid;
         gap: 1rem;
 
@@ -168,8 +168,25 @@ a {
             max-width: 400px;
         }
 
-        .option-group {
-            
+        .option-button {
+            font-family: inherit;
+            width: 100px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $accent2;
+            border: .5rem outset $accent2;
+            padding: 0.5rem 1rem;
+
+            &:hover {
+                background-color: $accent2;
+                color: $bkg;
+            }
+
+            &.active {
+                background-color: $accent2;
+                color: $bkg;
+
+            }
         }
 
         .option-wrapper {

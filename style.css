@@ -132,7 +132,7 @@ a {
 .generator__input {
   border: 0.5rem outset #1777de;
   background-color: floralwhite;
-  padding: 2rem;
+  padding: 2rem 1.4rem;
   display: -ms-grid;
   display: grid;
   gap: 1rem;
@@ -142,6 +142,26 @@ a {
   .generator__input {
     max-width: 400px;
   }
+}
+
+.generator__input .option-button {
+  font-family: inherit;
+  width: 100px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1777de;
+  border: 0.5rem outset #1777de;
+  padding: 0.5rem 1rem;
+}
+
+.generator__input .option-button:hover {
+  background-color: #1777de;
+  color: floralwhite;
+}
+
+.generator__input .option-button.active {
+  background-color: #1777de;
+  color: floralwhite;
 }
 
 .generator__input .option-wrapper {

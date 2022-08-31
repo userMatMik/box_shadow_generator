@@ -24,57 +24,59 @@
             <div class="generator__input">
                 <h2>Border radius options</h2>
                 <div class="option-group">
+                    <button class="option-button active">PX</button>
+                    <button class="option-button">%</button>
+                </div>
+                <div class="option-group">
                     <div class="option-wrapper">
                         <label for="top-left">Top left</label>
-                        <input type="number" name="top-left" id="top-left-input" step="1" min="-100" max="100" value="12">
+                        <input type="number" name="top-left" id="top-left-input" step="1" min="0" max="200" value="0">
                     </div>
-                    <input type="range" name="top-left" id="top-left-range" step="1" min="-100" max="100" value="12">
+                    <input type="range" name="top-left" id="top-left-range" step="1" min="0" max="200" value="0">
                 </div>
                 <div class="option-group">
                     <div class="option-wrapper">
                         <label for="top-right">Top right</label>
-                        <input type="number" name="top-right" id="top-right-input" step="1" min="-100" max="100" value="12">
+                        <input type="number" name="top-right" id="top-right-input" step="1" min="0" max="200" value="0">
                     </div>
-                    <input type="range" name="top-right" id="top-right-range" step="1" min="-100" max="100" value="12">
+                    <input type="range" name="top-right" id="top-right-range" step="1" min="0" max="200" value="0">
                 </div>
                 <div class="option-group">
                     <div class="option-wrapper">
                         <label for="bottom-right">Bottom right</label>
-                        <input type="number" name="bottom-right" id="bottom-right-input" step="1" min="-100" max="100" value="12">
+                        <input type="number" name="bottom-right" id="bottom-right-input" step="1" min="0" max="200" value="0">
                     </div>
-                    <input type="range" name="bottom-right" id="bottom-right-range" step="1" min="-100" max="100" value="12">
+                    <input type="range" name="bottom-right" id="bottom-right-range" step="1" min="0" max="200" value="0">
                 </div>
                 <div class="option-group">
                     <div class="option-wrapper">
                         <label for="bottom-left">Bottom left</label>
-                        <input type="number" name="bottom-left" id="bottom-left-input" step="1" min="-100" max="100" value="12">
+                        <input type="number" name="bottom-left" id="bottom-left-input" step="1" min="0" max="200" value="0">
                     </div>
-                    <input type="range" name="bottom-left" id="bottom-left-range" step="1" min="-100" max="100" value="12">
+                    <input type="range" name="bottom-left" id="bottom-left-range" step="1" min="0" max="200" value="0">
                 </div>
                 <div class="option-group">
                     <div class="option-wrapper">
                         <label for="box-width">Box width</label>
-                        <input type="number" name="box-width" id="box-width-input" step="1" min="10" max="400" value="100">
+                        <input type="number" name="box-width" id="box-width-input" step="1" min="10" max="400" value="200">
                     </div>
-                    <input type="range" name="box-width" id="box-width-range" step="1" min="10" max="400" value="100">
+                    <input type="range" name="box-width" id="box-width-range" step="1" min="10" max="400" value="200">
                 </div>
                 <div class="option-group">
                     <div class="option-wrapper">
                         <label for="box-height">Box height</label>
-                        <input type="number" name="box-height" id="box-height-input" step="1" min="10" max="400" value="100">
+                        <input type="number" name="box-height" id="box-height-input" step="1" min="10" max="400" value="200">
                     </div>
-                    <input type="range" name="box-height" id="box-height-range" step="1" min="10" max="400" value="100">
+                    <input type="range" name="box-height" id="box-height-range" step="1" min="10" max="400" value="200">
                 </div>
                 
             </div>
             <div class="generator__preview">
-                <div id="box" class="box" style="box-shadow: rgba(66, 68, 90, 0.8) 12px 12px 22px 0px;"></div>
+                <div id="box" class="box"></div>
             </div>
         </div>
         <div class="generator__output">
             <p class="code" id="generatedCode">
-                -webkit-box-shadow: 12px 12px 22px 0px rgba(66, 68, 90, 0.8);<br>
-                -moz-box-shadow: 12px 12px 22px 0px rgba(66, 68, 90, 0.8);<br>
                 box-shadow: 12px 12px 22px 0px rgba(66, 68, 90, 0.8);
             </p>
             <div class="btn-container">
